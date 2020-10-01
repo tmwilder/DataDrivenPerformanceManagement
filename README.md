@@ -6,6 +6,9 @@ strategic synergies implied by this shift:
 * Commit Velocity, as an objective metric, shall be the basis for your ongoing performance assessment.
 
 ## Getting Started
+Step 1: Create a GitHub repo to aid in your assessment.
+
+Step 2: Demonstrate your growth potential: 
 ```
 git checkout git@github.com:tmwilder/DataDrivenPerformanceManagement.git
 python main.py 
