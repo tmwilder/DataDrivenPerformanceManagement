@@ -1,15 +1,16 @@
-import random
-import subprocess
+import argparse
 import os
 import os.path as op
+import random
 import shutil
+import subprocess
 
-from typing import List
 from _datetime import datetime, timedelta
+from typing import List
 
 
 def get_times_for_day(today: datetime, mean_commits: int) -> List[datetime]:
-    how_productive_are_we_today = round(random.normalvariate(mean_commits, 7))
+    how_productive_are_we_today = round(random.normalvariate(mean_commits, (mean_commits/3)))
     return sorted([
         datetime(
             year=today.year,
@@ -86,7 +87,30 @@ def main(days_back: int, mean_commits: int, author_email: str, author_name: str,
     return []
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(description='Demonstrate your ninja skills.')
+    parser.add_argument('-n', '--author-name', required=True, type=str, help='Your GitHub user name.')
+    parser.add_argument('-e', '--author-email', required=True, type=str, help='Your GitHub email address.')
+    parser.add_argument('-d', '--days-back', required=False, default=90, type=int,
+                        help='For how many days have you been killing it?')
+    parser.add_argument('-c', '--average-commits-per-day', required=False, default=15, type=int,
+                        help='How much hacking, on average, occurred per day?')
+    parser.add_argument('-r', '--repo-name', required=False, default="synergisticvelocity", type=str,
+                        help='How much hacking, on average, occurred per day?')
+    return vars(parser.parse_args())
+
+
 if __name__ == '__main__':
-    # Parse CLI
-    # Change commit message to the future is now
-    main(360, 35, "tmwilder@gmail.com", "tmwilder", "testrepo")
+    args = parse_args()
+    arg_days_back = args["days_back"]
+    arg_author_email = args["author_email"]
+    arg_author_name = args["author_name"]
+    arg_average_commits_per_day = args["average_commits_per_day"]
+    arg_repo_name = args["repo_name"]
+    main(
+        days_back=arg_days_back,
+        mean_commits=arg_average_commits_per_day,
+        author_email=arg_author_email,
+        author_name=arg_author_name,
+        repo_name=arg_repo_name
+    )
