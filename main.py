@@ -88,4 +88,5 @@ def main(days_back: int, mean_commits: int, author_email: str, author_name: str,
 
 if __name__ == '__main__':
     # Parse CLI
+    # Change commit message to the future is now
     main(360, 35, "tmwilder@gmail.com", "tmwilder", "testrepo")
