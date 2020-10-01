@@ -11,7 +11,7 @@ Step 1: Create a GitHub repo to aid in your assessment.
 Step 2: Demonstrate your growth potential: 
 ```
 git checkout git@github.com:tmwilder/DataDrivenPerformanceManagement.git
-python main.py 
+python3 main.py 
     --author-name yourgithubhandle
     --author-email yourgithubemail
     --days-back 120
