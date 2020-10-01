@@ -20,6 +20,6 @@ git push upstream main
 ```
 
 ## Next Steps
-* Take a short break - [your KPI will be evaluted shortly](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile).
+* Stand by - [your KPI will be evaluted shortly](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile).
 * To ensure excellence - KPI shall be evaluated on a curve.
 * We appreciate your cooperation!
