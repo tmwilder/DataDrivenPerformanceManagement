@@ -88,4 +88,4 @@ def main(days_back: int, mean_commits: int, author_email: str, author_name: str,
 
 if __name__ == '__main__':
     # Parse CLI
-    main(30, 15, "tmwilder@gmail.com", "tmwilder", "testrepo")
+    main(360, 35, "tmwilder@gmail.com", "tmwilder", "testrepo")
