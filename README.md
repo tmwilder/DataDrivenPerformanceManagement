@@ -7,7 +7,7 @@ strategic synergies implied by this shift:
 
 ## Getting Started
 ```
-git checkout git@github.com:tmwilder/commiterator.git
+git checkout git@github.com:tmwilder/DataDrivenPerformanceManagement.git
 python main.py 
     --author-name yourgithubhandle
     --author-email yourgithubemail
